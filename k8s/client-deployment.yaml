@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: client-deployment
-specs:
+spec:
   replicas: 3
   selector:
     matchLabels:
@@ -11,9 +11,9 @@ specs:
     metadata:
       labels:
         component: web
-      specs:
-        containers:
-          - name: client
-            image: vikramnagarkar/multi-client
-            ports:
-              - containerPort: 3000
+    spec:
+      containers:
+        - name: client
+          image: vikramnagarkar/multi-client
+          ports:
+            - containerPort: 3000
