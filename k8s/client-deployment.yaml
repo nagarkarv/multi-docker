@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: client-deployment
-spec:
+specs:
   replicas: 3
   selector:
     matchLabels:
@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         component: web
-      spec:
+      specs:
         containers:
           - name: client
             image: vikramnagarkar/multi-client
